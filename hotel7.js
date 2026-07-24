@@ -1,0 +1,22 @@
+
+const patients = [
+{ name: "Suman", age: 25 },
+{ name: "Aarav", age: 12 }, 
+
+{ name: "Ramesh", age: 72 }, 
+{ name: "Priya", age: 34 }
+];
+console.log("--- Processing Patient Queue ---");
+for (let i = 0; i < patients.length; i++) {
+if (patients[i].age < 18) {
+console.log(`Skipping minor patient: ${patients[i].name}`);
+continue; // Skip minor
+}
+if (patients[i].age > 70) {
+console.log(`Critical age threshold reached (${patients[i].name}).
+Stopping loop.`);
+break; // Stop loop
+}
+console.log(`Processing adult patient: ${patients[i].name}`);
+}
+
